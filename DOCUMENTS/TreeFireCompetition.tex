@@ -113,7 +113,7 @@
 %% Sample for unstructured abstract %%
 %%==================================%%
 
-\abstract{The abstract serves both as a general introduction to the topic and as a brief, non-technical summary of the main results and their implications. Authors are advised to check the author instructions for the journal they are submitting to for word limits and if structural elements like subheadings, citations, or equations are permitted.}
+\abstract{Each year since 2014, a Christmas tree fire safety event has been organized at the University of Maryland to highlight the potential fire risk of dry Christmas trees. Full-scale fire experiments at these events are used to demonstrate how properly maintaining a cut Christmas tree (to maintain a high moisture content in tree branches and needles) can help to reduce the likelihood of  and to limit fire growth rate and peak fire size. The event is regularly covered by local and national media who help to distribute and amplify the holiday fire safety message. Additionally, the experiments provide in-person experience with large fire dynamics for fire protection engineering students (to support their coursework), they have supported** advanced diagnostics for multiple research projects, and they have enabled an annual, friendly competition that encourages communication and collaboration between members of the fire safety science community. This manuscript introduces a new digital repository that organizes and maintains test data and metadata from 15 years of these experiments. It also quantifies factors impacting fire growth behavior in these tests and offers an analysis of how well competition participants (members of the fire safety science and engineering community) can predict ignition and fire growth behavior of these tree fires.}
 
 %%================================%%
 %% Sample for structured abstract %%
@@ -134,39 +134,83 @@
 %%\pacs[MSC Classification]{35A01, 65L10, 65L12, 65L20, 65L70}
 
 \maketitle
-
+\clearpage
 \section{Introduction}\label{sec:intro}
 
-Every year, fire departments in the United States respond to an average of 150 to 200 Christmas Tree fires~\cite{Campbell2022christmas}, which are often more deadly than other house fires~\cite{ahrens2017christmastrees}\footnote{A 2017 the National Fire Protection Association (NFPA) report, \textit{Home Structure Fires Involving Christmas Trees}~\cite{ahrens2017christmastrees}, noted that, "On average, one of every 32 reported home Christmas tree fires resulted in a death, compared to an average of one death per 143 total reported home fires." This represents a factor of 4.5x increase.}. Beginning in 2014~\cite{pbsnewshour2014christmastrees}, a series of Christmas Tree fire safety demonstrations has been coordinated each year at the University of Maryland (UMD) to: (1) support and promote better public awareness of fire safety during the holiday season, (2) to highlight relevant experimental\cite{Giovanni's work, Gollner/Leventon} and modeling\cite{Mell, Maranghides, McDermott} research projects and tools, and (3) to offer students of the Fire Protection Engineering Department at UMD the opportunity to experience and measure fire behaviors that they [typically only study on paper during their regular coursework**]. 
+Every year, fire departments in the United States respond to an average of 150 to 200 Christmas Tree fires~\cite{Campbell2022christmas} (despite their use in a relatively short time each year).Home structure fires involving Christmas trees are, on average, substantially more deadly\footnote{A 2017 the National Fire Protection Association (NFPA) report, \textit{Home Structure Fires Involving Christmas Trees}~\cite{ahrens2017christmastrees}, noted that, "If a Christmas tree fire occurs, the risk of death is unusually high... On average, one of every 32 reported home Christmas tree fires resulted in a death, compared to an average of one death per 143 total reported home fires." This represents a factor of 4.5x increase.} than other house fires~\cite{ahrens2017christmastrees}. Beginning in 2014~\cite{pbsnewshour2014christmastrees}, a series of Christmas Tree fire safety demonstrations has been coordinated each year to: (1) support and promote better public awareness of fire safety during the holiday season, (2) to highlight relevant experimental\cite{Giovanni's work, Gollner/Leventon} and modeling\cite{Mell, Maranghides, McDermott} research projects and tools, and (3) to offer Fire Protection Engineering students the opportunity to experience and measure fire behaviors that they [typically only study on paper during their regular coursework**]. These tests are conducted at the University of Maryland, College Park (UMD) with support from faculty and researchers of the UMD Department of Fire Protection Engineering (FPE) and the National Institute of Standards and Technology (NIST).
 
-In addition sharing this fire safety message, these experiments also serve as the target for an annual competition to predict the burning behavior (i.e., heat release rate, HRR) of Christmas Tree fires, from ignition to final burnout. This competition provides a platform for open communication between members of the fire safety science community and an opportunity to encourage and motivate current researchers and the next generation of scientists and engineers to explore and develop collaborations related to emerging areas of fire safety science.
+In its first year, this fire safety event served as the final for an introductory fire science program taught at UMD (this program was supported in 2015 by a grant from the Society of Fire Protection Engineers, SFPE, Scientific and Educational Foundation). Later, senior- and graduate-level students of the FPE department have watched these fire experiments (from a safe distance) to contextualize the fire behaviors that they study. In various years, these experiments were included in courses such as fire dynamics, enclosure fire modeling, and the graduate fire dynamics laboratory to allow students to practice assessing design fires, calculating fire risk (e.g., zone of influence and heat transfer at a distance), and performing statistical and uncertainty analyses of large fire datasets.
 
-As the risk posed by wildfires and wildland urban interface (WUI) fires continues to grow~\cite{}, yearly test matrices have been expanded and additional measurement devices have been incorporated into experiments to produce unique datasets and to quantify factors that impact tree burning behavior (e.g., ignition source, ambient conditions, or tree species, size, and moisture content). 
+As the risk posed by wildfires and wildland urban interface (WUI) fires continues to grow~\cite{parks2020warmer, cunningham2024increasing,kelley2025state}, test matrices for these fire safety demonstrations have been expanded and additional measurement devices have been incorporated to produce unique datasets (e.g., firebrand yield) and to quantify factors that impact tree burning behavior (e.g., ignition source, ambient conditions, or tree species, size, and moisture content). In some cases, these results have been directly included in conference presentations and/or journal publications~\cite{leventon-gollner}; in others, the experiments provide an opportunity for calibration measurement devices used in other studies~\cite{adetolla-raffan}.
 
-This paper highlights the development of these fire safety demos from a small, local event within the Department of Fire Protection Engineering at UMD to annual tradition with a global footprint: the Christmas Tree Fire Size Competition includes hundreds submissions from participants in dozens of countries across the world and [related fire safety multi-media/videos] have received millions of impressions). Here, we present:
-\begin{itemize}
-\item Review of measurement data and test/material metadata obtained
-\item Analysis of these results across 15 years to highlight impacts of XY on ABC behaviors
-\item Summary of how the HRR prediction competition is organized, has grown
-\item What we can learn from these predictions 
-\begin{itemize}
-\item What are we good at predicting?
-\item What are we bad at predicting?
-\item (How) has this evolved?
-\end{itemize}
-\end{itemize}
+In addition to sharing a fire safety message and supporting research efforts, these experiments also serve as the target for an annual competition to predict the burning behavior (i.e., heat release rate, HRR) of Christmas Tree fires, from ignition to final burnout. This competition provides a platform for open communication between members of the fire safety science community and an opportunity to encourage and motivate current researchers and the next generation of scientists and engineers to explore and develop collaborations related to emerging areas of fire safety science. 
+
+This paper highlights the development of these fire safety demos from a small, local event within the Department of Fire Protection Engineering at UMD to annual tradition with a global footprint: each year, the Christmas Tree Fire Size Competition includes hundreds predictions from participants in dozens of countries across the world and [related fire safety multi-media/videos] have received millions of impressions while the fire safety experiments receive continued local and national media attention. Specifically, this manuscript describes the development, organization, and standard formatting used in a new online repository 
+of the measurement data and test metadata obtained during these experiments. Corresponding analysis of these results highlights impacts of key factors that affect observed burning behavior. A review of competition results similarly highlights how the HRR prediction competition is organized, how it has grown, and what can be learned from these predictions (i.e., what are participants - all members of the fire safety science and engineering community - good or bad at predicting and (how) has this evolved?).
+
+
 Fire safety messaging: let's get a review on fear, fear + action.\\
 don't forget that ACS publication on tree fire safety. Highlight value/risk in repeated information (borax as fire retardant..)
 
 From J Bonny - some background/refs on what experience(s) help best build awareness of potential fire safety risk.
 
-\\
+
 Numerous works reviews have highlights xyz that are important gaps or strong correlation/impact on key burning behavior.\\
-In 15 years of testing, some of these have been explored to (1) produce unique datasets - firebrand yield.. (2) explore impact of these key things?, and (3) steadily build a useful repository of fires
 
 
 \section{Experimental}\label{sec:exp}
+Christmas tree fire safety demos conducted for decades, including early work performed by NIST to xyz (moisture content, ignition, sprinklers..)~\cite{xyz}\\
+In 2017? fire safety video updated to provide (beautiful 4k video ++ package). This work was completed during the first years of the competition, with some support/collaboration by the lead organizer of the event/UMD fire safety demos.
+
+These studies, and related work on wildfires highlight the coupled influence of tree moisture content and ignition source size/strength on ignitability and early fire growth rate of these fires. Similar observations have been made in the literature for [**common combustibles in the built environment~\cite{}] and vegetative fuels in a wildfire context.
+
 \subsection{Materials/Fuels}\label{ssec:exp-matls}
+In total, \# species of trees have been tested in this ongoing test series, each with a range of initial moisture contents. These tree species were selected because of their widespread presence across difference regions in North America and the relative ease with which they could be acquired. Each year, typically in late November or early December, trees are purchased (and in some cases, received as donations) from hardware supply stores and tree farms in central Maryland. Figure~\ref{fig:3trees} shows representative  images of three of these tree species prior to testing (each studied during the winter of 2019/2020~\cite{leventon-gollner}). The common and scientific names of each of all tree species tested to date, and their respective habitats, are identified in Table~\ref{tab:tree-species}. 
+
+\begin{table}[]
+	\footnotesize
+	\caption{Materials Tested}
+	\label{tab:tree-species}
+	\begin{tabular}{p{4cm}|p{4cm}p{4cm}p{4cm}p{4cm}}
+		\hline
+		\textbf{Common Name}&Balsam Fir&Canaan Fir &Douglas-Fir&Fraser Fir\\
+		\textbf{Scientific Name}&Abies Balsamea**&???**&Pseudotsuga Menziesii&Abies Fraseri\\
+		\textbf{habitat}&Eastern and Central Canada, Northeastern US &&Rocky Mountain Region, North America&Southeastern Appalachian Mountains \\
+		\hline
+		\textbf{Height}&&&&\\
+		\textbf{Weight}&&&&\\
+		\textbf{Moisture Content}&&&&\\
+		\textbf{Ignition Source}&&&&\\
+		%\multicolumn{3}{p{14.4cm}}{\textsuperscript{A} Rocky Mountain Research Station (Missoula, Montana)}\\
+%		\multicolumn{5}{p{14.4cm}}{\textsuperscript{B} Peat collected near Prudhoe bay was obtained from a flooded wetland meadow (5~cm to 10~cm standing water depth) dominated by eriophorum species.}\\
+	\end{tabular}
+\end{table}
+
+\begin{figure} 
+	\centering 
+	\begin{subfigure}[t]{0.3\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{../FIGURES/BalsamFir_inlab.png}
+		\caption{Balsam fir, \textit{Abies Balsamea}; Eastern and Central Canada, Northeastern US }
+		\label{Fig:BalsamFir}
+	\end{subfigure}
+	\begin{subfigure}[t]{0.3\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{../FIGURES/Douglas-Fir_inlab.png}
+		\caption{Douglas-Fir, \textit{Pseudotsuga Menziesii}; Rocky Mountain Region, North America}
+		\label{Fig:DouglasFir}
+	\end{subfigure}
+	\begin{subfigure}[t]{0.3\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{../FIGURES/FraserFir_inlab.png}
+		\caption{Fraser Fir, \textit{Abies Fraseri}; Southeastern Appalachian Mountains }
+		\label{Fig:FraserFir}
+	\end{subfigure}
+	\caption{Representative images of tree species prior to burning. }
+	\label{fig:3trees}
+\end{figure}
+
+
 \subsection{Measurements and Test Procedure}\label{ssec:exp-measurements}
 \subsubsection{Ignition Source}
 %%%%Impact of ignition source on fire growth rate:
@@ -412,26 +456,13 @@ If your article has accompanying supplementary file/s please state so here.
 
 \bmhead{Acknowledgements}
 
-These experiments have been made possible thanks to the efforts of researchers, technicians, support staff, and students at both the University of Maryland (UMD) and the National Institute of Standards and Technology (NIST). Their continuous support has enabled yearly testing, recording of measurement data, competition coordination, and media outreach / fire safety messaging.
+These experiments have been made possible thanks to the efforts of researchers, technicians, support staff, and students at both the University of Maryland (UMD) and the National Institute of Standards and Technology (NIST). Their continuous support has enabled yearly testing, recording of measurement data, competition coordination, and media outreach / fire safety messaging. In particular, the following student researchers are thanked for their support in data archiving, formatting, and analysis:  Seungjun (Victor) Jeong, Mahdi Tlemsani**. A special thanks is also made to the authors of a recent large-scale fire experiments conducted at NIST on Douglas-Fir trees between 2.1~m and 5.8~m tall; use of their mass loss measurement data and thoughtful discussions improved the analysis included in this manuscript.
 
 
 \section*{Declarations}
 
-Some journals require declarations to be submitted in a standardised format. Please check the Instructions for Authors of the journal to which you are submitting to see if you need to complete this section. If yes, your manuscript must contain the following sections under the heading `Declarations':
+All measurement data presented in this manuscript is found online in a freely-available, version-controlled github repository: \url{https://github.com/leventon/Christmas_Tree_Fires}
 
-\begin{itemize}
-\item Funding
-\item Conflict of interest/Competing interests (check journal-specific guidelines for which heading to use)
-\item Ethics approval and consent to participate
-\item Consent for publication
-\item Data availability 
-\item Materials availability
-\item Code availability 
-\item Author contribution
-\end{itemize}
-
-\noindent
-If any of the sections are not relevant to your manuscript, please include the heading and write `Not applicable' for that section. 
 
 %%===================================================%%
 %% For presentation purpose, we have included        %%
@@ -467,7 +498,7 @@ An appendix contains supplementary information that is not an essential part of 
 %% file, and delete the associated \verb+\bibliography+ commands.                            %%
 %%===========================================================================================%%
 
-\bibliography{References}% common bib file
+\bibliography{References.bib}% common bib file
 %% if required, the content of .bbl file can be included here once bbl is generated
 %%\input sn-article.bbl
 
