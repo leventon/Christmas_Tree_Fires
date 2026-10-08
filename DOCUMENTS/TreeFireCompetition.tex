@@ -43,6 +43,7 @@
 
 \usepackage{graphicx}%
 \usepackage{multirow}%
+\usepackage{subcaption}
 \usepackage{amsmath,amssymb,amsfonts}%
 \usepackage{amsthm}%
 \usepackage{mathrsfs}%
@@ -159,23 +160,36 @@ Numerous works reviews have highlights xyz that are important gaps or strong cor
 
 
 \section{Experimental}\label{sec:exp}
-Christmas tree fire safety demos conducted for decades, including early work performed by NIST to xyz (moisture content, ignition, sprinklers..)~\cite{xyz}\\
-In 2017? fire safety video updated to provide (beautiful 4k video ++ package). This work was completed during the first years of the competition, with some support/collaboration by the lead organizer of the event/UMD fire safety demos.
+Christmas tree fire safety research has been conducted for decades, demonstrating the impact of moisture content~\cite{stroup1999scotch,damant1994christmas,Babrauskas2001,white1997flammability}, geometry~\cite{madrzykowski2008impact}, tree size~\cite{evans2004physics}, and even the presence of sprinklers\cite{madrzykowski2008impact}\\
+Related work on the burning of large trees and other vegetative fuels (whole or components)~\cite{Gio-3x, catchpole1998rate, Babrauskas2001, dahale2013effects,white1997flammability, etlinger2004development} further highlight the coupled influence of tree moisture content, ignition source (size and strength), ambient wind, and tree size, geometry, and bulk density on ig nitability, early fire growth rate, and peak fire size of such fires. 
+In 2020, a small series of experiments was conducted to examine the difference in fire hazard between a dry Christmas tree and a watered Christmas~\cite{hoehler2020fire} 
+tree for fire safety awareness fire safety video updated to provide (beautiful 4k video ++ package). This work was completed during the first years of the competition, with some support/collaboration by the lead organizer of the event/UMD fire safety demos.
 
-These studies, and related work on wildfires highlight the coupled influence of tree moisture content and ignition source size/strength on ignitability and early fire growth rate of these fires. Similar observations have been made in the literature for [**common combustibles in the built environment~\cite{}] and vegetative fuels in a wildfire context.
+coupled experimental, modeling studies:\\
+australian pine: https://www.sciencedirect.com/science/article/pii/S037971122500164X#b14\\
+douglas fir: mell/mcdermott || https://www.sciencedirect.com/science/article/pii/S0010218009001655\\
+douglas fir: acaray, morvan || https://journals.sagepub.com/doi/10.1177/07349041231218967\\
+Australian pine: https://doi.org/10.1016/j.firesaf.2025.104500
+
+%"Recent experiments involving over 20 conifer species have been conducted at Washington State University to determine the MC where branches initially begin to fail an ignition test, and the MC for consistent failure (Figure 3). During these studies, 15.3 cm-long branch samples were exposed to a flame from a small alcohol lamp for 5 seconds. If the sample failed to burn or selfextinguished without any additional spread when the sample was removed from the flame, it passed the test. If there was any spread of the flame after the sample was removed from the flame, it failed the test. Results from these tests indicates that there is considerable variation in the MC where different species failed this test. In addition, there is often a large transition zone of MC from the point of initially failing the flammability test to the point where samples consistently fail. There is also a difference in the MC where samples fail the test and the MC when samples are totally consumed by the fire. For example, Douglas-fir begins to fail the branch flammability test at about 68\% MC, but is totally consumed only when dried to about 30\% MC (Figure 4)."[]~\cite{Babrauskas2001} Chastanger's section]
+
+Impact of ignition source:
+(on PVC trees) "The specimens proved impossible to ignite with a small flame, but using the UL procedure (crumpled newspaper in a 61cm circle around base of tree) they produced rapidly developing fires, with 500 kW being attained 11?20 s after ignition..." substantially larger fire when paper ignited in four locations [This come from unpublished work included in Vyto's Heat Release Rates chapter in the SFPE handbook]
+
+%%%%%%%%%%%
 
 \subsection{Materials/Fuels}\label{ssec:exp-matls}
-In total, \# species of trees have been tested in this ongoing test series, each with a range of initial moisture contents. These tree species were selected because of their widespread presence across difference regions in North America and the relative ease with which they could be acquired. Each year, typically in late November or early December, trees are purchased (and in some cases, received as donations) from hardware supply stores and tree farms in central Maryland. Figure~\ref{fig:3trees} shows representative  images of three of these tree species prior to testing (each studied during the winter of 2019/2020~\cite{leventon-gollner}). The common and scientific names of each of all tree species tested to date, and their respective habitats, are identified in Table~\ref{tab:tree-species}. 
+As of 2026, \#\# individual trees of \# species of trees have been tested as part of this ongoing Christmas Tree fire test series, each with a range of initial moisture contents. These tree species were selected because of their widespread presence across different regions in North America and the relative ease with which they could be acquired around the holiday season. Each year, typically in late November or early December, trees were purchased (and in some cases, received as donations) from hardware supply stores and/or tree farms in Central Maryland. Figure~\ref{fig:3trees} shows representative images of three of these tree species prior to testing (each studied during the winter of 2019/2020~\cite{leventon-gollner}). The common and scientific names of each of all tree species tested to date, and their respective habitats, are identified in Table~\ref{tab:tree-species}. 
 
 \begin{table}[]
 	\footnotesize
-	\caption{Materials Tested}
+	\caption{Species Tested}
 	\label{tab:tree-species}
-	\begin{tabular}{p{4cm}|p{4cm}p{4cm}p{4cm}p{4cm}}
+	\begin{tabular}{p{2.5cm}|p{2.5cm}p{2.5cm}p{2.5cm}p{2.5cm}}
 		\hline
 		\textbf{Common Name}&Balsam Fir&Canaan Fir &Douglas-Fir&Fraser Fir\\
 		\textbf{Scientific Name}&Abies Balsamea**&???**&Pseudotsuga Menziesii&Abies Fraseri\\
-		\textbf{habitat}&Eastern and Central Canada, Northeastern US &&Rocky Mountain Region, North America&Southeastern Appalachian Mountains \\
+		\textbf{Habitat}&Eastern and Central Canada, Northeastern US &&Rocky Mountain Region, North America&Southeastern Appalachian Mountains \\
 		\hline
 		\textbf{Height}&&&&\\
 		\textbf{Weight}&&&&\\
