@@ -150,6 +150,13 @@ This paper highlights the development of these fire safety demos from a small, l
 of the measurement data and test metadata obtained during these experiments. Corresponding analysis of these results highlights impacts of key factors that affect observed burning behavior. A review of competition results similarly highlights how the HRR prediction competition is organized, how it has grown, and what can be learned from these predictions (i.e., what are participants - all members of the fire safety science and engineering community - good or bad at predicting and (how) has this evolved?).
 
 
+\section{Experimental}\label{sec:exp}
+\subsection{Background}
+Christmas tree fire safety research has been conducted for decades, demonstrating the impact of moisture content~\cite{stroup1999scotch,damant1994christmas,Babrauskas2001, white1997flammability}, geometry~\cite{madrzykowski2008impact}, tree size~\cite{evans2004physics}, and even the impact of residential sprinklers\cite{madrzykowski2008impact} on tree burning behavior. More recently, different physics-based models (WFDS~\cite{Mell2009}, FireStar3D~\cite{Accary2024}, FDS 6.9.1~\cite{Gupta2025}) have been validated to predict experimentally-measured burning behavior of 1.5~m to 5~m tall trees, with further analysis exploring model sensitivity: to grid resolution, definition of ignition conditions, fuel moisture content, representation of fuel particles (geometry, particle size distribution, heats of combustion), and description of pyrolysis/oxidation reactions. Related experimental studies of the burning behavior of large trees and other vegetative fuels (whole or components)~\cite{Gio-3x, catchpole1998rate, Babrauskas2001, dahale2013effects, Morandini2019, etlinger2004development, white1997flammability} further highlight the coupled influence of tree moisture content, ignition source (size, strength, and location), ambient wind, and tree size, geometry, and bulk density on ignitability, early fire growth rate, and peak fire size. 
+%Morandini2019 - beautiful experimental characterization of particle size / mass distribution as a function of shrub height. exp/modeling paper. vary ignition location - lower in shrub --> larger fires
+
+In 2020, an experiments were conducted at NIST to examine the difference in fire hazard between a dry and a well-watered Christmas tree  ~\cite{hoehler2020fire}, with the explicit goal of recording both accurate HRR measurements and high-quality video recordings (in a realistic setting) for fire safety awareness. 
+
 Fire safety messaging: let's get a review on fear, fear + action.\\
 don't forget that ACS publication on tree fire safety. Highlight value/risk in repeated information (borax as fire retardant..)
 
@@ -158,27 +165,89 @@ From J Bonny - some background/refs on what experience(s) help best build awaren
 
 Numerous works reviews have highlights xyz that are important gaps or strong correlation/impact on key burning behavior.\\
 
+Repeat the value of this exercise is not simply the dataset, but the unique ways that it can be shared, ingested, worked with, etc..
 
-\section{Experimental}\label{sec:exp}
-Christmas tree fire safety research has been conducted for decades, demonstrating the impact of moisture content~\cite{stroup1999scotch,damant1994christmas,Babrauskas2001,white1997flammability}, geometry~\cite{madrzykowski2008impact}, tree size~\cite{evans2004physics}, and even the presence of sprinklers\cite{madrzykowski2008impact}\\
-Related work on the burning of large trees and other vegetative fuels (whole or components)~\cite{Gio-3x, catchpole1998rate, Babrauskas2001, dahale2013effects,white1997flammability, etlinger2004development} further highlight the coupled influence of tree moisture content, ignition source (size and strength), ambient wind, and tree size, geometry, and bulk density on ig nitability, early fire growth rate, and peak fire size of such fires. 
-In 2020, a small series of experiments was conducted to examine the difference in fire hazard between a dry Christmas tree and a watered Christmas~\cite{hoehler2020fire} 
-tree for fire safety awareness fire safety video updated to provide (beautiful 4k video ++ package). This work was completed during the first years of the competition, with some support/collaboration by the lead organizer of the event/UMD fire safety demos.
 
-coupled experimental, modeling studies:\\
-australian pine: https://www.sciencedirect.com/science/article/pii/S037971122500164X#b14\\
-douglas fir: mell/mcdermott || https://www.sciencedirect.com/science/article/pii/S0010218009001655\\
-douglas fir: acaray, morvan || https://journals.sagepub.com/doi/10.1177/07349041231218967\\
-Australian pine: https://doi.org/10.1016/j.firesaf.2025.104500
+
 
 %"Recent experiments involving over 20 conifer species have been conducted at Washington State University to determine the MC where branches initially begin to fail an ignition test, and the MC for consistent failure (Figure 3). During these studies, 15.3 cm-long branch samples were exposed to a flame from a small alcohol lamp for 5 seconds. If the sample failed to burn or selfextinguished without any additional spread when the sample was removed from the flame, it passed the test. If there was any spread of the flame after the sample was removed from the flame, it failed the test. Results from these tests indicates that there is considerable variation in the MC where different species failed this test. In addition, there is often a large transition zone of MC from the point of initially failing the flammability test to the point where samples consistently fail. There is also a difference in the MC where samples fail the test and the MC when samples are totally consumed by the fire. For example, Douglas-fir begins to fail the branch flammability test at about 68\% MC, but is totally consumed only when dried to about 30\% MC (Figure 4)."[]~\cite{Babrauskas2001} Chastanger's section]
 
-Impact of ignition source:
-(on PVC trees) "The specimens proved impossible to ignite with a small flame, but using the UL procedure (crumpled newspaper in a 61cm circle around base of tree) they produced rapidly developing fires, with 500 kW being attained 11?20 s after ignition..." substantially larger fire when paper ignited in four locations [This come from unpublished work included in Vyto's Heat Release Rates chapter in the SFPE handbook]
+%Impact of ignition source:
+%(on PVC trees) "The specimens proved impossible to ignite with a small flame, but using the UL procedure (crumpled newspaper in a 61cm circle around base of tree) they produced rapidly developing fires, with 500 kW being attained 11?20 s after ignition..." substantially larger fire when paper ignited in four locations [This come from unpublished work included in Vyto's Heat Release Rates chapter in the SFPE handbook]
+%Ref\cite{Accary2024} explored how burner power and duration affected MLR predictions (only )
 
 %%%%%%%%%%%
+\subsection{Measurements and Test Procedure}\label{ssec:exp-measurements}
+After procurement, the initial mass, height, and weight of each tree is measured and then trees are kept unwatered for approximately 14 to 21 days in laboratory storage at the University of Maryland\footnote{Each year, at least one tree is kept in a 5 gallon bucket of water (continuously refilled) to allow for comparison of well-watered and dry tree burning behavior. In some years, additional tests are conducted with expanded conditioning durations to explore a wider range of tree moisture contents. All trees are stored approximately at approximately 40\% relative humidity and 20$^\circ$C}. Immediately prior to testing, small branches are removed from the base of each tree (approximately 100~g to 200~g), weighed, dried in an oven at 80$^\circ$C for approximately 2 days, and then re-weighed. Tree moisture content is calculated as $MC=\frac{m_{0}-m_{\text{dry}}}{m_\text{{dry}}}$.%, where the subscripts '0' and 'dry' indicate branch masses before and after oven drying.
+The 'dry' mass of the full tree is then measured, the tree is secured in a metal stand, and then this stand is placed above a mass balance that is protected by a radiation shield and several layers of rigid thermal insulation. 
 
-\subsection{Materials/Fuels}\label{ssec:exp-matls}
+During tests, the mass balance/tree are positioned at the center of (underneath) an exhaust hood that measures 3.66~m by 3.66~m (square profile, sides nominally 12 ft wide). The hood is rated for a nominal air flow rate of 10,000~CFM. Three sides of the exhaust hood were enclosed using fire-rated fabric curtains to help contain the potential spread of firebrands generated during testing.  When used, heat flux gauges and/or thermocouples are then secured in place and their locations are measured/recorded. The ignition source is then moved into position below the lowest branches of the tree, data and video recording are started and confirmed, and the ignition source is ignited. Once the lower branches of the tree ignite, the exhaust hood is turned on. Trees are allowed to burn until self-extinction, after which final tree mass is measured, data and video recording were stopped, and pictures of the remaining sample were taken.
+
+\subsubsection{Ignition Source}
+Previous studies have demonstrated how ignition source type, strength, duration, and location all can affect fire growth characteristics of both vegetative fuels and materials/products found in the built environment~\cite{dembsey1993effect,ai1987effects,cleary1994influence, Babrauskas2001, Morandini2019, Accary2024, gould2022initial}. In a wildfire context, multiple studies have also assessed the impact of ignition source (e.g., point source vs. smaller or larger line fires) on wildfire spread rate~\cite{Rothermel1984Aerial, Johansen1987Ignition, Alexander1991PorterLake,gould2022initial}. 
+Though this has been explored in some modeling studies (e.g., Ref~\cite{Accary2024}, limited information is available from experiments designed to systematically quantify how variations in ignition size/severity, duration, and/or location affect fire growth rate/peak fire size of individual vegetative fuels (which in turn controls/can strongly impact ROS).
+
+With this in mind, careful consideration was given to the ignition sources used in this Christmas Tree fire safety study. This ensured that ignition could be performed repeatably and that the source reasonably represented a small fire hazard found in the home. Most often, this meant filling a 6~cm to 10~cm disc (cut from rigid ceramic insulation board and backed/wrapped by aluminum foil) with approximately 30~mL of heptane and placing this beneath the lowest branches at the base of the tree. Both to conduct parametric studies and to make the fire size prediction competition more challenging (i.e., such that ignition and fire growth could be reasonably expected to change each year) the location of this small pool fire could be moved from year to year (e.g., near the center of the tree or towards the outer branches). Also, in some years, this pool fire was replaced by a full ring (cut from the same ceramic insulation) to allow for uniform ignition around the entire base of the tree. Additionally, in later years of the competition, tree ignition was accomplished by the spread of a ground fire across an angled bed of excelsior placed below the base of the tree - this new ignition source both (1) offered a new connection to wildland fire scenarios and (2) emphasized prediction of tree ignition time delay (due to flame spread) as an important scoring category.
+
+%%%%Impact of ignition source on fire growth rate:
+%" effect of ignition source exposure and specimen configuration on the actual fire growth characteristics of polyvinyl chloride (PVC) foam wall covering... :(i) the PVC foam has a ?critical? ignition source strength of 64?75 kW; (ii) preheating the PVC foam greatly increases its peak net rate of heat release."~\cite{dembsey1993effect}
+
+%"[really not the best - different burner sizes, HRR in a room lined with chipboard (hink MDF). burner HRR controls time to flashover / T=500C]~\cite{ai1987effects}
+
+%" upholstered chairs ... five different fabric/foam combinations ...ignited by a cigarette, a small match-like flame, an incandescent lamp, a space heater, and a large flame source (TB 133 ignition source)... for any chair type (more/less variation in t\_peak for diff chairs), the time to the peak heat release rate depended on the ignition sequence, but the magnitude of the peak did not"~\cite{cleary1994influence}
+
+
+%"Fifty-eight fires of three ignition patterns (point, 400-mm line and 800-mm line) were carried out at two air speeds (1.25 and 2.0?m s?1) and two dead fuel moisture content (FMC) groups for each air speed (?7.5~\% and >7.5\% oven-dry weight for the low air speed and ?5\% and >5\% for the high air speed)."[shows how time to steady/peak spread rate of litter fuel beds is affected by ignition source \cite{gould2022initial}
+\subsubsection{Measurement Devices}
+\textbf{Burning Rate and Heat Release}\\
+Measurements recorded during this ongoing test series include: initial and final tree masses, time-resolved mass loss rate during burning, and heat flux at a distance. In certain test series, local temperature measurements (in or near the tree during burning) or total firebrand yield and mass/projected areas of individual firebrands were also recorded. In general, all experiments were conducted in the large fire lab at the University of Maryland. However, in 2024, the competition was based on measurements of extremely large (5.8~m** tall) tree fires that were performed in the National Fire Research Laborartory (NFRL) at NIST. This measurements and corresponding uncertainties of this dataset -- including MLR**, HRR, heat flux at \#** locations -- is detailed elsewhere~\cite{Gio et al.}. Excluding this dataset, all measurements were recorded as described below.
+
+A Mettler Toldeo **Model Number* mass balance \footnote{ The identification of any commercial product or trade name does not imply endorsement or recommendation by NIST (or any other contributing institution)} with a 32~kg range and 0.1~g precision was used for all\footnote{In Winter 2019/2020, a detailed study of firebrand generation was conducted; the masses of individual firebrands was measured using a balance with higher precision, as described below.} mass measurements obtained in this test series (both static, and time-resolved). Sample mass was continuously measured at 1~Hz throughout the duration of each experiment. Mass loss rate was then calculated at each time step, $t_i$, as the numerical derivative of sample mass curves across a $\pm$~2~s interval, as follows: 
+\begin{equation}
+	\dot{m}_{i} = \frac{\left(m_{i-2}-m_{i+2}\right)}{\left(t_{i+2}-t_{i-2}\right)}
+\end{equation}
+
+For the purposes of the competition, heat release rate was calculated as the product of measured mass loss rate and an assumed heat of combustion, typically $\Delta H_c=17.7$~kJ/g. 
+
+Heat Flux: ()approximately 2~m away from the outside edge of the tree
+
+
+\textbf{Firebrand Generation}\\
+"Surrounding each tree, a series of
+approximately 60 water-filled aluminum trays covered the floor space inside this enclosure
+to extinguish and collect firebrands formed during testing.
+Inside the exhaust hood, approximately 3 m above the floor, a 2.5 m by 2.5 m square
+frame was built to support a steel mesh (opening dimensions, 0.25 cm square). This mesh
+was installed to contain any firebrands that were formed and lofted upwards during burning.
+The total open area of this mesh screen was sufficiently large such that air flow rate through
+the mesh was low enough that even small leaves (high surface area to volume/mass ratio)
+would not stick to the mesh due to operation of the exhaust hood. However, while trees were
+burning, due to the increased fire-induced upwards flow, some firebrands were captured by
+this screen. Typically, these firebrands were small, lightweight leaves/needles that would
+smolder to ash within 45 s (i.e., by the end of the experiment).
+
+
+All firebrands generated during testing were carefully collected by filtering each waterfilled pan, draining the water, and saving the remaining pieces in a new pan for further
+sorting. Firebrands were sorted into two groups ? smaller brands (approximately 10 cm
+or smaller), which were charred across the majority of their surface (and thus assumed
+to be smoldering prior to collection in the water pans) and larger pieces (e.g., branches)
+that had broken off near their base (at attachment point to the trunk) but remained mostly
+unburned. All firebrands were dried for 48 hours in a convection oven at approximately
+120$^\circ$C and then weighed; measured masses of smaller and branch-type firebrands were
+noted as mfirebrands and mbranch, respectively.
+
+
+In total, more than 10,700 individual firebrands were collected in this series of experiments; after drying, the mass and projected area of each one was measured as follows.
+First, individual firebrands were selected by ceramic tweezers and placed on a Sartorius
+Cubis MSE3203S mass balance (3200 g range; 1 mg repeatability, i.e., standard deviation
+when calculated from 5 cycles under the conditions reported in Ref. [39]). After weighing,
+firebrands were placed (12 at a time) onto predetermined regions of a 0.64 m by 0.73 m
+sheet of white poster board. A photograph of these firebrands was then taken using a Nikon
+D3200 DSLR camera with a Nikon AF-S DX NIKKOR 18-55mm lens that was positioned
+approximately 0.8 m above the board."
+
+
+\subsection{Materials/Fuels and Sample Conditioning}\label{ssec:exp-matls}
 As of 2026, \#\# individual trees of \# species of trees have been tested as part of this ongoing Christmas Tree fire test series, each with a range of initial moisture contents. These tree species were selected because of their widespread presence across different regions in North America and the relative ease with which they could be acquired around the holiday season. Each year, typically in late November or early December, trees were purchased (and in some cases, received as donations) from hardware supply stores and/or tree farms in Central Maryland. Figure~\ref{fig:3trees} shows representative images of three of these tree species prior to testing (each studied during the winter of 2019/2020~\cite{leventon-gollner}). The common and scientific names of each of all tree species tested to date, and their respective habitats, are identified in Table~\ref{tab:tree-species}. 
 
 \begin{table}[]
@@ -224,21 +293,6 @@ As of 2026, \#\# individual trees of \# species of trees have been tested as par
 	\label{fig:3trees}
 \end{figure}
 
-
-\subsection{Measurements and Test Procedure}\label{ssec:exp-measurements}
-\subsubsection{Ignition Source}
-%%%%Impact of ignition source on fire growth rate:
-" effect of ignition source exposure and specimen configuration on the actual fire growth characteristics of polyvinyl chloride (PVC) foam wall covering... :(i) the PVC foam has a ?critical? ignition source strength of 64?75 kW; (ii) preheating the PVC foam greatly increases its peak net rate of heat release."~\cite{dembsey1993effect}
-
-"[really not the best - different burner sizes, HRR in a room lined with chipboard (hink MDF). burner HRR controls time to flashover / T=500C]~\cite{ai1987effects}
-
-" upholstered chairs ... five different fabric/foam combinations ...ignited by a cigarette, a small match-like flame, an incandescent lamp, a space heater, and a large flame source (TB 133 ignition source)... for any chair type (more/less variation in t\_peak for diff chairs), the time to the peak heat release rate depended on the ignition sequence, but the magnitude of the peak did not"~\cite{cleary1994influence}
-
-Add Generic comment on how multiple studies assess impact of ignition source (point source vs. smaller/larger line fire) on wildfire spread rate~\cite{Rothermel1984Aerial, Johansen1987Ignition, Alexander1991PorterLake,gould2022initial}, but limited information on how ignition source, type, duration, and/or severity affect fire growth rate/peak fire size of individual vegetative fuels (which controls/can stronly impact ROS).
-
-"Fifty-eight fires of three ignition patterns (point, 400-mm line and 800-mm line) were carried out at two air speeds (1.25 and 2.0?m s?1) and two dead fuel moisture content (FMC) groups for each air speed (?7.5~\% and >7.5\% oven-dry weight for the low air speed and ?5\% and >5\% for the high air speed)."[shows how time to steady/peak spread rate of litter fuel beds is affected by ignition source \cite{gould2022initial}
-\subsubsection{Burning Rate and Heat Release}
-\subsubsection{Firebrand Generation}
 
 \section{HRR Prediction Competition}\label{sec:competition}
 \subsection{Development and Organization}\label{ssec:comp-organization}
