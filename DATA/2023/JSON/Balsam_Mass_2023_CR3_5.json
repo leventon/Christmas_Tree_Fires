@@ -1,0 +1,31 @@
+{
+    "ID": "CR3",
+
+    "common_name": "Balsam",
+
+    "scientific_name": "Abies balsamea",
+
+    "experiment_date": "December 12, 2023",
+    
+    "units": 
+
+        {
+            "length": "meters",
+            "mass": "grams"
+        },
+
+    "height": 1.8,
+
+    "width": 1.15,
+
+    "initial_mass": 10695,
+
+    "pretest_mass": 5300,
+
+    "posttest_mass": 1659.7,
+
+    "branch_predry": 55.7,
+
+    "branch_postdry": 52.8
+
+}

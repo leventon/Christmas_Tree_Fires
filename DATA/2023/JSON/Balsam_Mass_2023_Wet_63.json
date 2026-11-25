@@ -1,0 +1,31 @@
+{
+    "ID": "Wet",
+
+    "common_name": "Balsam",
+
+    "scientific_name": "Abies balsamea",
+
+    "experiment_date": "December 12, 2023",
+    
+    "units": 
+
+        {
+            "length": "meters",
+            "mass": "grams"
+        },
+
+    "height": 1.8,
+
+    "width": 1.1,
+
+    "initial_mass": 14450,
+
+    "pretest_mass": 14100,
+
+    "posttest_mass": 13277.4,
+
+    "branch_predry": 259.1,
+
+    "branch_postdry": 158.5
+
+}

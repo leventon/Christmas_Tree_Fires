@@ -1,0 +1,31 @@
+{
+    "ID": "Shake",
+
+    "common_name": "Balsam",
+
+    "scientific_name": "Abies balsamea",
+
+    "experiment_date": "December 12, 2023",
+    
+    "units": 
+
+        {
+            "length": "meters",
+            "mass": "grams"
+        },
+
+    "height": 2.05,
+
+    "width": 1.05,
+
+    "initial_mass": null,
+
+    "pretest_mass": 5330,
+
+    "posttest_mass": 3556.8,
+
+    "branch_predry": 118.8,
+
+    "branch_postdry": 102.7
+
+}
