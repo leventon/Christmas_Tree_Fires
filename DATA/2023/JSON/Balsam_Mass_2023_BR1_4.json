@@ -1,0 +1,31 @@
+{
+    "ID": "BR1",
+
+    "common_name": "Balsam",
+
+    "scientific_name": "Abies balsamea",
+
+    "experiment_date": "December 12, 2023",
+    
+    "units": 
+
+        {
+            "length": "meters",
+            "mass": "grams"
+        },
+
+    "height": 1.9,
+
+    "width": 0.95,
+
+    "initial_mass": 8560,
+
+    "pretest_mass": 5570,
+
+    "posttest_mass": 2807.65,
+
+    "branch_predry": 76.4,
+
+    "branch_postdry": 73.2
+
+}
